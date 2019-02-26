@@ -1,0 +1,178 @@
+Script started on Mon 24 Apr 2017 09:00:11 PM PDT
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m cat program1.java
+// Ocean Lu
+// CS140
+// Project 1, Task #1 - Calculating Hourly Pay
+// 04.25.17
+
+import java.util.Scanner;
+public class program1 {
+    public static void main(String[] args) {
+        System.out.print("Please enter hours you worked this week: ");
+        Scanner keyboard = new Scanner(System.in);
+        int hours = keyboard.nextInt();
+        System.out.print("Please enter your hourly pay rate: ");
+        double rate = keyboard.nextDouble();
+        double pay;
+        if (hours > 40 && hours < 60) {
+            pay = (rate * 40) + (rate * 1.5 * (hours - 40));
+            System.out.println("Your gross pay is $" + pay);
+        } else if (hours >= 60) {
+            pay = (rate * 40) + (rate * 1.5 * (20));
+            System.out.println("Your gross pay is $" + pay);
+        } else if (hours < 15) {
+            pay = 0;
+            System.out.println("Sorry you need to work at least 15 hours to get paid this week.\nYour hours worked will be deferred to next week.");
+        } else {
+            pay = (rate * hours);
+            System.out.println("Your gross pay is $" + pay);
+        }
+    }
+}
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m javac program1.java
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m program1.j[K[K[K[K[K[K[K[K[K[Kjava program1
+Please enter hours you worked this week: 35
+Please enter your hourly pay rate: 25.0
+Your gross pay is $875.0
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program1
+Please enter hours you worked this week: 22
+Please enter your hourly pay rate: 18.5
+Your gross pay is $407.0
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program1
+Please enter hours you worked this week: 42
+Please enter your hourly pay rate: 20
+Your gross pay is $860.0
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program1
+Please enter hours you worked this week: 58
+Please enter your hourly pay rate: 22.8
+Your gross pay is $1527.6
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program1
+Please enter hours you worked this week: 12
+Please enter your hourly pay rate: 25
+Sorry you need to work at least 15 hours to get paid this week.
+Your hours worked will be deferred to next week.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program1
+Please enter hours you worked this week: 65
+Please enter your hourly pay rate: 25
+Your gross pay is $1750.0
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m cat program2.java
+// Ocean Lu
+// CS140
+// Progject 1, Task #2 - Determining Seasons
+// 04.25.17
+
+import java.util.Scanner;
+public class program2 {
+    public static void main(String[] args) {
+        System.out.print("Please enter month (1-12): ");
+        Scanner keyboard = new Scanner(System.in);
+        int month = keyboard.nextInt();
+        System.out.print("Please enter day (1-31): ");
+        Scanner kbd = new Scanner(System.in);
+        int day = kbd.nextInt();
+        if (month > 12 || month < 1) {
+            System.out.println("Invalid month!");
+        }
+        if (day > 31 || day < 1) {
+            System.out.println("Invalid day!");
+        }
+        if (month <= 12 && month >= 1 && day <= 31 && day >= 1) {
+            int month_day = (month * 100) + day;
+            if (month_day <= 320) {
+                System.out.println(month + "/" + day + " is in the Winter Season.");
+            } else if (month_day <= 620) {
+                System.out.println(month + "/" + day + " is in the Spring Season.");
+            } else if (month_day <= 920) {
+                System.out.println(month + "/" + day + " is in the Summer Season.");
+            } else if (month_day <= 1220) {
+                System.out.println(month + "/" + day + " is in the Fall Season.");
+            } else {
+                System.out.println(month + "/" + day + " is in the Winter Season.");
+            }
+        }
+    }
+}
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m javac program2.java
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 1
+Please enter day (1-31): 5
+1/5 is in the Winter Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 2
+Please enter day (1-31): 5
+2/5 is in the Winter Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 4
+Please enter day (1-31): 10
+4/10 is in the Spring Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 5
+Please enter day (1-31): 10
+5/10 is in the Spring Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 7
+Please enter day (1-31): 15
+7/15 is in the Summer Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 8
+Please enter day (1-31): 15
+8/15 is in the Summer Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 10
+Please enter day (1-31): 20
+10/20 is in the Fall Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 11
+Please enter day (1-31): 20
+11/20 is in the Fall Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m pr[K[Kjav [Ka program2
+Please enter month (1-12): 3
+Please enter day (1-31): 20
+3/20 is in the Winter Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 3
+Please enter day (1-31): 21
+3/21 is in the Spring Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 6
+Please enter day (1-31): 20
+6/20 is in the Spring Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 6
+Please enter day (1-31): 21
+6/21 is in the Summer Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m pr[K[Kjava program2
+Please enter month (1-12): 9
+Please enter day (1-31): 20
+9/20 is in the Summer Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 9
+Please enter day (1-31): 21
+9/21 is in the Fall Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 12
+Please enter day (1-31): 20
+12/20 is in the Fall Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 12
+Please enter day (1-31): 21
+12/21 is in the Winter Season.
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 0
+Please enter day (1-31): 0
+Invalid month!
+Invalid day!
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): -3
+Please enter day (1-31): -5
+Invalid month!
+Invalid day!
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m java program2
+Please enter month (1-12): 13
+Please enter day (1-31): 32
+Invalid month!
+Invalid day!
+]0;oslu@abbott:~/project[01;32moslu@abbott[01;34m ~/project $[00m exit
+exit
+
+Script done on Mon 24 Apr 2017 09:06:05 PM PDT

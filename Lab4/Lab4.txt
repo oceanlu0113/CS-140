@@ -1,0 +1,106 @@
+Script started on Fri 14 Apr 2017 03:20:14 PM PDT
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m cat yha[K[KangBMI.java
+// Author: Ocean Lu
+// Assignment: Lab #4
+// Completed: 04/14/2017
+
+import java.util.Scanner;
+public class yangBMI {
+	public static void main(String[] args) {
+		System.out.print("Please input \"m\" for Metric or \"e\" for English: ");
+	        Scanner keyboard = new Scanner(System.in);
+	        String choice = keyboard.nextLine();
+	        if (choice.equals("m")) {
+			System.out.print("Please enter weight (kilograms): ");
+	        	double weight = keyboard.nextDouble();
+       			System.out.print("Please enter height (meters): ");
+        		Scanner kbd = new Scanner(System.in);
+        		double height = kbd.nextDouble();
+  			double bmi = weight / (Math.pow(height, 2));
+       			System.out.printf("Weight: %.2f, Height: %.2f, BMI: %.0f\n", weight, height, bmi);
+        		if (bmi <= 24) {
+        			System.out.println("You are normal.");
+        		}
+        		if (bmi > 24 && bmi < 30) {
+        	        	System.out.println("You are overweight.");
+        	    	}
+        	    	if (bmi >= 30) {
+        	        	System.out.println("You are obese.");
+        	    	}
+       		}
+		if (choice.equals("e")) {
+    			System.out.print("Please enter weight (lb): ");
+    	        	double weight = keyboard.nextDouble();
+    	        	System.out.print("Please enter height (inches): ");
+    	        	Scanner kbd = new Scanner(System.in);
+    	        	double height = kbd.nextDouble();
+    	        	double bmi = weight / (Math.pow(height, 2)) * 703;
+            		System.out.printf("Weight: %.2f, Height: %.2f, BMI: %.0f\n", weight, height, bmi);
+            		if (bmi <= 24) {
+                		System.out.println("You are normal.");
+            		}
+            		if (bmi > 24 && bmi < 30) {
+                		System.out.println("You are overweight.");
+            		}
+            		if (bmi >= 30) {
+                		System.out.println("You are obese.");
+            		}
+        	}
+	}
+}
+
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac yangBMI.java
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java yangBMI
+Please input "m" for Metric or "e" for English: e
+Please enter weight (lb): 107
+Please enter height (inches): 60
+Weight: 107.00, Height: 60.00, BMI: 21
+You are normal.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java yangBMI
+Please input "m" for Metric or "e" for English: 168   e
+Please enter weight (lb): 168
+Please enter height (inches): 65
+Weight: 168.00, Height: 65.00, BMI: 28
+You are overweight.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java yangBMI
+Please input "m" for Metric or "e" for English: e
+Please enter weight (lb): 250
+Please enter height (inches): 70
+Weight: 250.00, Height: 70.00, BMI: 36
+You are obese.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java yangBMI
+Please input "m" for Metric or "e" for English: m
+Please enter weight (kilograms): 63
+Please enter height (meters): 1.7
+Weight: 63.00, Height: 1.70, BMI: 22
+You are normal.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java yangBMI
+Please input "m" for Metric or "e" for English: m
+Please enter weight (kilograms): 75
+Please enter height (meters): 1.65
+Weight: 75.00, Height: 1.65, BMI: 28
+You are overweight.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java yangBMI
+Please input "m" for Metric or "e" for English: m
+Please enter weight (kilograms): 85
+Please enter height (meters): 1.55
+Weight: 85.00, Height: 1.55, BMI: 35
+You are obese.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Yang[K[K[K[KyangBMI
+Please input "m" for Metric or "e" for English: e
+Please enter weight (lb): 3a2
+Exception in thread "main" java.util.InputMismatchException
+	at java.util.Scanner.throwFor(Scanner.java:864)
+	at java.util.Scanner.next(Scanner.java:1485)
+	at java.util.Scanner.nextDouble(Scanner.java:2413)
+	at yangBMI.main(yangBMI.java:31)
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java yangBMI
+Please input "m" for Metric or "e" for English: m
+Please enter weight (kilograms): 0 1 20 6  50
+Please enter height (meters): 0
+Weight: 50.00, Height: 0.00, BMI: Infinity
+You are obese.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m exit
+exit
+
+Script done on Fri 14 Apr 2017 03:25:31 PM PDT

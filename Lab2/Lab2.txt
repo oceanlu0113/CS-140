@@ -1,0 +1,58 @@
+Script started on Tue 04 Apr 2017 12:09:16 PM PDT
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m cat Prog1.java
+// Author: Ocean Lu
+// Assignment: Lab #2
+// Task #1
+// Completed: 04/04/2017
+
+import java.util.Scanner;
+public class Prog1 
+{
+public static void main(String[] args) 
+{
+// Task #1
+System.out.println("Student: \t\"Tyler Wood\"");
+System.out.println("Major: \t\t\\Computer Science\\");
+System.out.println("Study List: \tCS \'130\', \'140\', and MAT \'115\'");
+}
+}
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac Prog1.java
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog1
+Student: 	"Tyler Wood"
+Major: 		\Computer Science\
+Study List: 	CS '130', '140', and MAT '115'
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m cat Prog2.java
+// Author: Ocean Lu
+// Assignment: Lab #2
+// Task #2
+//Completed: 04/04/2017
+
+import java.util.Scanner;
+public class Prog2 {
+public static void main(String[] args) {
+System.out.print("What is your name: ");
+Scanner keyboard = new Scanner (System.in);
+String name = keyboard.nextLine();
+System.out.print("What is your age: ");
+int age = keyboard.nextInt();
+System.out.print("What is your company name: ");
+Scanner input = new Scanner (System.in);
+String companyName = input.nextLine();
+System.out.print("What is your monthly salary: ");
+Double monthlySalary = keyboard.nextDouble();
+System.out.println("My name is " + name + ", and my age is " + age 
++ " and I hope to work for " + companyName + " and earn " + 
+(monthlySalary*12) + " per year.");
+}   
+}
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac Prog2.java
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog2
+What is your name: o^HO    Ocean
+What is your age: 18
+What is your company name: Goo   Blizzard
+What is your monthly salary: 100
+My name is Ocean, and my age is 18 and I hope to work for Blizzard and earn 1200.0 per year.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m exit
+exit
+
+Script done on Tue 04 Apr 2017 12:10:24 PM PDT

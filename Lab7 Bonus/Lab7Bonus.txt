@@ -1,0 +1,90 @@
+Script started on Thu 11 May 2017 12:21:24 PM PDT
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m cat Prog1.java
+// Author: Ocean Lu
+// Assignment: Lab #7 Bonus
+// Task: #1
+// Completed: 05/11/2017
+
+import java.util.Random;
+public class Prog1 {
+    public static void main(String[] args) {
+        System.out.println("Tonight we will be drawing SuperLotto Plus numbers.");
+        SuperLotto();
+    }
+    
+    public static void SuperLotto () {
+        //rand.nextInt((max - min) + 1) + min;
+        Random rand = new Random();
+        int l = rand.nextInt(46) + 1;
+        int u = rand.nextInt(46) + 1;
+        int c = rand.nextInt(46) + 1;
+        int k = rand.nextInt(46) + 1;
+        int y = rand.nextInt(46) + 1;
+        int mega = rand.nextInt(26) + 1;
+        System.out.println(l + " " + u + " " + c + " " + k + " " + y);
+    }
+}
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac Prog2[K1.java
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog1
+Tonight we will be drawing SuperLotto Plus numbers.
+10 40 38 43 43
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog1
+Tonight we will be drawing SuperLotto Plus numbers.
+28 43 46 45 24
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m j[Kcat Prog2.java
+// Author: Ocean Lu
+// Assignment: Lab #7 Bonus
+// Task #2
+// Completed: 05/11/2017
+
+import java.util.Scanner;
+import java.util.Random;
+public class Prog2 {
+    public static void main(String[] args) {
+        System.out.println("Welcome to the guessing game.");
+        Random rand = new Random();
+        int num = rand.nextInt(19) + 1;
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Please enter your guess: ");
+        for (int i = 0; i < 3; i++) {
+            int guess = keyboard.nextInt();
+            if (guess < num) {
+                System.out.println("Too low, try again.");
+            } else if (guess > num) {
+                System.out.println("Too high, try again");
+            }
+            else if (guess == num) {
+                System.out.println("Yes! The secret number is " +num);
+                System.exit(0);
+            }
+        }
+        System.out.println("Sorry! You lost. Buy.");
+    }
+}
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac Prog2.java
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog2
+Welcome to the guessing game.
+Please enter your guess: 11
+Yes! The secret number is 11
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog2
+Welcome to the guessing game.
+Please enter your guess: 10
+Too high, try again
+7
+Too high, try again
+6
+Too high, try again
+Sorry! You lost. Buy.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac Prog2[K[K[K[K[K[K[K Prog2
+Welcome to the guessing game.
+Please enter your guess: 11
+Too high, try again
+6
+Too high, try again
+2
+Too high, try again
+Sorry! You lost. Buy.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m exit
+exit
+
+Script done on Thu 11 May 2017 12:22:39 PM PDT

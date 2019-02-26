@@ -1,0 +1,84 @@
+Script started on Tue 11 Apr 2017 11:05:24 AM PDT
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m cat Prog1.java
+// Author: Ocean Lu
+// Assignment: Lab #3
+// Task #1
+// Completed: 04/11/2017
+
+import java.util.Scanner;
+public class Prog1 
+{
+public static void main(String[] args) 
+{
+        System.out.print("Please enter weight (kilograms): ");
+        Scanner keyboard = new Scanner (System.in);
+        double weight = keyboard.nextDouble();
+        System.out.print("Please enter height (meters): ");
+        Scanner kbd = new Scanner (System.in);
+        double height = kbd.nextDouble();
+        double bmi = weight/(Math.pow(height, 2));
+        System.out.printf("Weight: %.2f\nHeight: %.2f\nBMI: %.0f\n", 
+weight, height, bmi);
+}
+}
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac Prog1.java
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog1.[K
+Please enter weight (kilograms): 52.5
+Please enter height (meters): 1.62
+Weight: 52.50
+Height: 1.62
+BMI: 20
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog1
+Please enter weight (kilograms): 75
+Please enter height (meters): 1.68
+Weight: 75.00
+Height: 1.68
+BMI: 27
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog1
+Please enter weight (kilograms): 110.5
+Please enter height (meters): 1.65
+Weight: 110.50
+Height: 1.65
+BMI: 41
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m cat Prog2.java
+// Author: Ocean Lu
+// Assignment: Lab #3
+// Task #2
+//Completed: 04/11/2017
+import java.util.Scanner;
+public class Prog2 {
+    public static void main(String[] args) {
+        System.out.print("Please enter weight (lb): ");
+        Scanner keyboard = new Scanner (System.in);
+        double weight = keyboard.nextDouble();
+        System.out.print("Please enter height (inches): ");
+        Scanner kbd = new Scanner (System.in);
+        double height = kbd.nextDouble();
+        double bmi = weight/(Math.pow(height, 2))*703;
+        System.out.printf("Weight: %.2f\nHeight: %.2f\nBMI: %.0f\n", 
+weight, height, bmi);
+}   
+}
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac [KpP[Kasdfawe;iof[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kjavac Prog2.java
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog2
+Please enter weight (lb): 110.5
+Please enter height (inches): 62.5
+Weight: 110.50
+Height: 62.50
+BMI: 20
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog2
+Please enter weight (lb): 180
+Please enter height (inches): 68
+Weight: 180.00
+Height: 68.00
+BMI: 27
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java Prog2
+Please enter weight (lb): 185.4
+Please enter height (inches): 65.5
+Weight: 185.40
+Height: 65.50
+BMI: 30
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m exit
+exit
+
+Script done on Tue 11 Apr 2017 11:08:47 AM PDT

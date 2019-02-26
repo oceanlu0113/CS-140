@@ -1,0 +1,22 @@
+Script started on Thu 30 Mar 2017 09:39:55 AM PDT
+]0;oslu@abbott:~/cs140[01;32moslu@abbott[01;34m ~/cs140 $[00m cat Example.java
+//Ocean
+//03/29/2017
+public class Example
+{
+public static void main (String[] args)
+{
+System.out.print("This is an example Java program");
+System.out.println();
+System.out.println(" ... a very SIMPLE one...");
+}
+}
+
+]0;oslu@abbott:~/cs140[01;32moslu@abbott[01;34m ~/cs140 $[00m javac Example.java
+]0;oslu@abbott:~/cs140[01;32moslu@abbott[01;34m ~/cs140 $[00m java Example
+This is an example Java program
+ ... a very SIMPLE one...
+]0;oslu@abbott:~/cs140[01;32moslu@abbott[01;34m ~/cs140 $[00m exit
+exit
+
+Script done on Thu 30 Mar 2017 09:40:09 AM PDT

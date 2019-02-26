@@ -1,0 +1,133 @@
+Script started on Wed 31 May 2017 09:32:02 PM PDT
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m cat ArrayProcessing.java
+// Author: Ocean Lu
+// Assignment: Project #4
+// Task #1
+// Completed: 05/31/2017
+
+import java.util.Scanner;
+import java.io.*;
+
+public class ArrayProcessing {
+
+    public static void main(String[] args) throws IOException {
+        int[] outputFile = inputData();
+        System.out.println("Original Array: ");
+        printArray(outputFile);
+	double average = average(outputFile);
+        System.out.printf("The average temperature is %.1fF degrees.\n", average);
+        System.out.println("The highest temperature is " + max(outputFile) + "F degrees.");
+        System.out.println("The lowest temperature is " + min(outputFile) + "F degrees.");
+        System.out.println("Sorted Array:");
+        selectionSort(outputFile);
+    }
+
+    public static int[] inputData() throws IOException {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.print("Enter input filename: ");
+        String fileName = keyboard.nextLine();
+        File file = new File(fileName);
+        if (!file.exists()) {
+            System.out.println("Error, file do not exist.");
+            System.exit(0);
+        } else {
+            int count = 0;
+            Scanner inputFile = new Scanner(file);
+            int[] numbers = new int[inputFile.nextInt()];
+            while (inputFile.hasNext() && count < numbers.length) {
+                numbers[count] = inputFile.nextInt();
+                count++;
+            }
+            inputFile.close();
+            return numbers;
+        }
+        return null;
+    }
+
+    public static void printArray(int[] array) {
+        for (int i = 1; i <= array.length; i++) {
+            System.out.print(array[i-1] + " ");
+            if (i % 10 == 0) {
+                System.out.println();
+            }
+        }
+	System.out.println();
+    }
+
+    public static double average(int[] array) {
+        double total = 0;
+        for (int i = 0; i < array.length; i++) {
+            total += array[i];
+        }
+        return total / array.length;
+    }
+
+    public static int max(int[] array) {
+        int highest = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > highest) {
+                highest = array[i];
+            }
+        }
+        return highest;
+    }
+
+    public static int min(int[] array) {
+        int lowest = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < lowest) {
+                lowest = array[i];
+            }
+        }
+        return lowest;
+    }
+
+
+    public static void selectionSort(int[] array) {
+        for (int s = 0; s <= array.length - 1; s++) {
+            for (int k = 0; k <= array.length - 2; k++) {
+                if (array[k] > array[k + 1]) {
+                    int temp = 0;
+                    temp = array[k];
+                    array[k] = array[k + 1];
+                    array[k + 1] = temp;
+                }
+            }
+        }
+        printArray(array);
+    }
+}
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m javac ArrayProcessing.java
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java ArrayProcessing
+Enter input filename: WrongFile.dat
+Error, file do not exist.
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java ArrayProcessing
+Enter input filename: MonthOf12Days.dat
+Original Array: 
+60 52 28 32 34 43 44 51 78 28 
+30 75 
+The average temperature is 46.3F degrees.
+The highest temperature is 78F degrees.
+The lowest temperature is 28F degrees.
+Sorted Array:
+28 28 30 32 34 43 44 51 52 60 
+75 78 
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m java ArrayProcessing
+Enter input filename: MonthOf30Days.dat
+Original Array: 
+21 83 24 5 22 57 29 18 62 96 
+82 34 19 95 9 14 54 19 65 83 
+16 36 76 88 62 31 57 54 86 36 
+
+The average temperature is 47.8F degrees.
+The highest temperature is 96F degrees.
+The lowest temperature is 5F degrees.
+Sorted Array:
+5 9 14 16 18 19 19 21 22 24 
+29 31 34 36 36 54 54 57 57 62 
+62 65 76 82 83 83 86 88 95 96 
+
+]0;oslu@costello:~[01;32moslu@costello[01;34m ~ $[00m exit
+exit
+
+Script done on Wed 31 May 2017 09:32:45 PM PDT
